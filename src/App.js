@@ -19,7 +19,9 @@ export const App = () => {
     }, []);
 
     const getChangeInELo = () => {
+
         const {rating, previous_rating} = playerInfo
+        if (!previous_rating) return '(--)';
         const change = rating - previous_rating;
         const symbol = change > 0 ? '📈' : '📉';
         return `(${change}) ${symbol}`;

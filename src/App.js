@@ -1,7 +1,7 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import {getLeaderboard, getMatchHistory} from './services/aoe-api';
-import {Panel} from "./components/panel";
+import {Panel} from './components/panel';
 
 export const App = () => {
     const [playerInfo, setPlayerInfo] = useState({

@@ -4,6 +4,7 @@ import {getLeaderboard, getMatchHistory} from './services/aoe-api';
 import {Panel} from './components/panel';
 
 export const App = () => {
+    const [loading, setLoading] = useState(true);
     const [playerInfo, setPlayerInfo] = useState({
         rating: '---',
         previous_rating: 0
@@ -19,13 +20,15 @@ export const App = () => {
             const response = await getMatchHistory();
             return setMatchHistory(response);
         }
-        fetchLeaderboadInfo();
-        fetchMatchesInfo();
+        Promise.all([
+            fetchLeaderboadInfo(),
+            fetchMatchesInfo()
+        ]).then(() => setLoading(false));
     }, []);
 
     return (
         <div className='page'>
-            <Panel playerInfo={playerInfo} matchHistory={matchHistory}/>
+            <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import {getLeaderboard, getMatchHistory} from './services/aoe-api';
-import {filterMatchHistory, getChangeInELo} from './helpers';
+import {Panel} from "./components/panel";
 
 export const App = () => {
     const [playerInfo, setPlayerInfo] = useState({
@@ -25,12 +25,7 @@ export const App = () => {
 
     return (
         <div className='page'>
-            <div className='panel'>
-                <h1>crochet</h1>
-                <h2>elo: {playerInfo.rating} {getChangeInELo(playerInfo)}</h2>
-                <p>{filterMatchHistory(matchHistory)}</p>
-                <p>streak: {playerInfo.streak}</p>
-            </div>
+            <Panel playerInfo={playerInfo} matchHistory={matchHistory}/>
         </div>
     );
 };

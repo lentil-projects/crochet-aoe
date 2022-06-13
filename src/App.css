@@ -1,37 +1,8 @@
-h1, h2, p, ul {
-    margin: 0;
-}
-
-h1 {
-    font-size: 4rem;
-}
-
-h2 {
-    font-size: 25px;
-}
-
 body {
     background: #018281;
 }
 
-marquee {
-    background: black;
-    color: white;
-}
-
-.page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background: #018281;
-}
-
-.panel {
-    padding: 50px;
-    background: lightgrey;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-    box-shadow: 5px 5px black;
+h1, h2, p, ul {
+    margin: 0;
+    font-size: 1rem;
 }

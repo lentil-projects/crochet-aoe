@@ -5,8 +5,8 @@ const StyledPanel = styled.div`
     padding: 50px;
     background: lightgrey;
     box-sizing: border-box;
-    margin-bottom: 50px;
     box-shadow: 5px 5px black;
+    height: 100%;
     h1 {
         font-size: 4rem;
     }

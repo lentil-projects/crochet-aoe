@@ -1,7 +1,19 @@
 import './App.css';
 import {useState, useEffect} from 'react';
+import {Routes, Route} from 'react-router-dom';
+import styled from 'styled-components';
 import {getLeaderboard, getMatchHistory} from './services/aoe-api';
-import {Panel} from './components/panel';
+import {Home} from './pages/home';
+import {Stream} from './pages/stream';
+
+const PageStyle = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #018281;
+`;
 
 export const App = () => {
     const [loading, setLoading] = useState(true);
@@ -27,8 +39,13 @@ export const App = () => {
     }, []);
 
     return (
-        <div className='page'>
-            <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>
-        </div>
+        <PageStyle>
+            <Routes>
+                <Route path='*'
+                       element={<Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>}/>
+                <Route path='/stream'
+                       element={<Stream playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>}/>
+            </Routes>
+        </PageStyle>
     );
 };

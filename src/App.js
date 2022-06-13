@@ -12,7 +12,7 @@ export const App = () => {
     const [matchHistory, setMatchHistory] = useState([]);
 
     useEffect(() => {
-        const fetchLeaderboadInfo = async () => {
+        const fetchLeaderboardInfo = async () => {
             const response = await getLeaderboard();
             return setPlayerInfo(response.leaderboard[0]);
         }
@@ -21,7 +21,7 @@ export const App = () => {
             return setMatchHistory(response);
         }
         Promise.all([
-            fetchLeaderboadInfo(),
+            fetchLeaderboardInfo(),
             fetchMatchesInfo()
         ]).then(() => setLoading(false));
     }, []);

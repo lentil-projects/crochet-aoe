@@ -11,6 +11,8 @@ export const Panel = props => {
                     <p>last match: {getLastMatchTime(matchHistory)}</p>
                     <p>{filterMatchHistory(matchHistory)}</p>
                     <p>streak: {playerInfo.streak}</p>
+                    <br/>
+                    <marquee>shout out new followers: Beige15, irl_goblin!</marquee>
                 </>
             ) : 'loading'}
         </div>

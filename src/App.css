@@ -1,4 +1,4 @@
-h1, h2, p {
+h1, h2, p, ul {
     margin: 0;
 }
 
@@ -11,7 +11,12 @@ h2 {
 }
 
 body {
+    background: #018281;
+}
+
+marquee {
     background: black;
+    color: white;
 }
 
 .page {
@@ -26,8 +31,6 @@ body {
 .panel {
     padding: 50px;
     background: lightgrey;
-    height: 300px;
-    width: 375px;
     box-sizing: border-box;
     margin-bottom: 50px;
     box-shadow: 5px 5px black;

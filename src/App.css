@@ -3,7 +3,7 @@ h1, h2, p {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 4rem;
 }
 
 h2 {
@@ -20,20 +20,15 @@ body {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background: url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+    background: #018281;
 }
 
 .panel {
-    border: solid black;
     padding: 50px;
-    border-radius: 10px;
-    background: rgba(256,256,256,.05);
+    background: lightgrey;
     height: 300px;
     width: 375px;
-    color: white;
-    backdrop-filter: blur(5px);
     box-sizing: border-box;
     margin-bottom: 50px;
+    box-shadow: 5px 5px black;
 }

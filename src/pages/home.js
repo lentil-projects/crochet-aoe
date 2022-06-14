@@ -20,7 +20,7 @@ export const Home = props => {
     return (
         <FlexDiv>
             <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>
-            <GraphPanel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
+            <GraphPanel matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
             <LinkDiv>
                 <LinkPanel link={twitch}/>
                 <LinkPanel link={github}/>

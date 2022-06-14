@@ -9,7 +9,15 @@ export const twitch = {
 export const github = {
     logo: <i className="fa-brands fa-github"></i>,
     name: 'crochetcode',
-    background: 'black',
+    background: '#333',
     color: 'white',
     link: 'https://github.com/crochetcode'
+}
+
+export const code = {
+    logo: <i className="fa-solid fa-code"></i>,
+    name: 'code',
+    background: 'lightgray',
+    color: 'black',
+    link: 'https://github.com/lentil-projects/crochet-aoe'
 }

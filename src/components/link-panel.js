@@ -1,26 +1,25 @@
 import styled from 'styled-components';
 
 const LinkPanelStyle = styled.div`
-    margin-left: 15px;
     margin-bottom: 15px;
-    padding: 25px;
+    padding: 15px;
     background: ${props => props.background};
     color: ${props => props.color};
-    box-shadow: 5px 5px ${props => props.color};
+    box-shadow: 5px 5px black;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
     border: 1px solid ${props => props.background};
     h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
     h2 {
-        font-size: 1.25rem;
+        font-size: 1.05rem;
     }
     &:hover {
         cursor: pointer;
-        box-shadow: 7px 7px ${props => props.color};
+        box-shadow: 7px 7px black;
 `;
 
 export const LinkPanel = props => {

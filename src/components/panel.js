@@ -17,6 +17,10 @@ const StyledPanel = styled.div`
         background: black;
         color: white;
     }
+    span {
+        background: hotpink;
+        font-size: 2rem;
+    }
 `;
 
 export const Panel = props => {
@@ -30,8 +34,8 @@ export const Panel = props => {
                     <p>last match: {getLastMatchTime(matchHistory)}</p>
                     <p>{filterMatchHistory(matchHistory)}</p>
                     <p>streak: {playerInfo.streak}</p>
-                    <br/>
-                    <marquee>shout out new followers: Beige15, irl_goblin!</marquee>
+                    <p>shout out new followers: <span>🚶🚶🚶</span></p>
+                    <marquee>Beige15, irl_goblin, and zebeastgg!</marquee>
                 </>
             ) : 'loading'}
         </StyledPanel>

@@ -2,7 +2,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
-import {getLeaderboard, getMatchHistory} from './services/aoe-api';
+import {getLeaderboard, getMatchHistory, getRatingHistory} from './services/aoe-api';
 import {Home} from './pages/home';
 import {Stream} from './pages/stream';
 
@@ -22,6 +22,7 @@ export const App = () => {
         previous_rating: 0
     });
     const [matchHistory, setMatchHistory] = useState([]);
+    const [ratingHistory, setRatingHistory] = useState([]);
 
     useEffect(() => {
         const fetchLeaderboardInfo = async () => {
@@ -32,9 +33,15 @@ export const App = () => {
             const response = await getMatchHistory();
             return setMatchHistory(response);
         }
+        const fetchRatingHistory = async () => {
+            const response = await getRatingHistory();
+            console.log(response)
+            return setRatingHistory(response);
+        }
         Promise.all([
             fetchLeaderboardInfo(),
-            fetchMatchesInfo()
+            fetchMatchesInfo(),
+            fetchRatingHistory()
         ]).then(() => setLoading(false));
     }, []);
 
@@ -42,9 +49,9 @@ export const App = () => {
         <PageStyle>
             <Routes>
                 <Route path='*'
-                       element={<Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>}/>
+                       element={<Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
                 <Route path='/stream'
-                       element={<Stream playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>}/>
+                       element={<Stream playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
             </Routes>
         </PageStyle>
     );

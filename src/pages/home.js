@@ -1,7 +1,8 @@
 import {Panel} from '../components/panel';
 import {LinkPanel} from '../components/link-panel';
-import {github, twitch} from '../constants/links';
+import {github, twitch, code} from '../constants/links';
 import styled from 'styled-components';
+import {GraphPanel} from '../components/graph-panel';
 
 const FlexDiv = styled.div`
     display: flex;
@@ -14,14 +15,16 @@ const LinkDiv = styled.div`
 `;
 
 export const Home = props => {
-    const {playerInfo, matchHistory, loading} = props;
+    const {playerInfo, matchHistory, loading, ratingHistory} = props;
 
     return (
         <FlexDiv>
             <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>
+            <GraphPanel matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
             <LinkDiv>
                 <LinkPanel link={twitch}/>
                 <LinkPanel link={github}/>
+                <LinkPanel link={code}/>
             </LinkDiv>
         </FlexDiv>
     );

@@ -1,5 +1,6 @@
-import {Panel} from '../components/panel';
 import styled from 'styled-components';
+import {Panel} from '../components/panel';
+import {GraphPanel} from '../components/graph-panel';
 
 const FlexDiv = styled.div`
     display: flex;
@@ -7,11 +8,12 @@ const FlexDiv = styled.div`
 `;
 
 export const Stream = props => {
-    const {playerInfo, matchHistory, loading} = props;
+    const {playerInfo, matchHistory, loading, ratingHistory} = props;
 
     return (
         <FlexDiv>
             <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>
+            <GraphPanel matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
         </FlexDiv>
     );
 };

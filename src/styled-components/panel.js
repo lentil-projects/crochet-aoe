@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledPanel = styled.div`
-    padding: 50px;
     margin-right: 15px;
     background: lightgrey;
     box-sizing: border-box;
@@ -17,8 +16,8 @@ export const StyledPanel = styled.div`
         background: black;
         color: white;
     }
-    span {
-        background: hotpink;
-        font-size: 2rem;
+
+    .content {
+        padding: 20px 35px;
     }
 `;

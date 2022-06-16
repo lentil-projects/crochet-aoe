@@ -8,7 +8,7 @@ export const Panel = props => {
         <StyledPanel>
             {title && <PanelHeader title={title}/>}
             <div className='content'>
-            <h1>crochet</h1>
+            <h1>crochet 🧶</h1>
             {!loading ? (
                 <>
                     <p>last match: {getLastMatchTime(matchHistory)}</p>

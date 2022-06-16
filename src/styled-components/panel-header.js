@@ -10,7 +10,9 @@ const StyledPanelHeader = styled.div`
     padding: 0 15px;
     box-sizing: border-box;
     font-weight: bold;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px black;
+    font-family: 'Courier new', 'MS Sans Serif';
 `;
 
 export const PanelHeader = props => {

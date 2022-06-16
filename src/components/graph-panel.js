@@ -28,13 +28,14 @@ export const GraphPanel = props => {
     return (
         <StyledPanel>
             {title && <PanelHeader title={title}/>}
+            <div className='content'>
             <ApexChart
                 options={options}
                 colors={options.colors}
                 series={options.series}
-                height={250}
                 width={350}
             />
+            </div>
         </StyledPanel>
     )
 };

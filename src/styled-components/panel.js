@@ -1,23 +1,33 @@
 import styled from 'styled-components';
 
 export const StyledPanel = styled.div`
-    margin-right: 15px;
-    background: lightgrey;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-right: 20px;
+    background: lightgray;
     box-sizing: border-box;
     box-shadow: 5px 5px black;
-    height: 325px;
+    border: 3px outset white;
     h1 {
-        font-size: 4rem;
-    }
+        font-size: 3rem;
+        font-weight: 800;
+    }   
     h2 {
         font-size: 25px;
     }
     marquee {
         background: black;
         color: white;
+        font-family: 'Papyrus';
+        font-size: 1.05rem;
     }
-
     .content {
-        padding: 20px 35px;
+        padding: 15px;
+        background: white;
+        margin: 5px;
+        border: 3px inset white;
+        height: 75%;
     }
 `;

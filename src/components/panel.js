@@ -7,7 +7,7 @@ export const Panel = props => {
     return (
         <StyledPanel>
             {title && <PanelHeader title={title}/>}
-            <div className="content">
+            <div className='content'>
             <h1>crochet</h1>
             {!loading ? (
                 <>

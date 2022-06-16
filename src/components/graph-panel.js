@@ -28,7 +28,7 @@ export const GraphPanel = props => {
     return (
         <StyledPanel>
             {title && <PanelHeader title={title}/>}
-            <div className="content">
+            <div className='content'>
             <ApexChart
                 options={options}
                 colors={options.colors}

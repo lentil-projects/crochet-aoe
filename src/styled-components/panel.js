@@ -13,7 +13,6 @@ export const StyledPanel = styled.div`
     h1 {
         font-size: 3rem;
         font-weight: 800;
-        // font-family: 'Press Start 2P', cursive;
     }   
     h2 {
         font-size: 25px;

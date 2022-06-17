@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
 import {getLeaderboard, getMatchHistory, getRatingHistory} from './services/aoe-api';
 import {Home} from './pages/home';
-import {Overlay} from "./pages/overlay";
+import {Overlay} from './pages/overlay';
 
 const PageStyle = styled.div`
     display: flex;

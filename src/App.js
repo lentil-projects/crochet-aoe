@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {getLeaderboard, getMatchHistory, getRatingHistory} from './services/aoe-api';
 import {Home} from './pages/home';
 import {Stream} from './pages/stream';
+import {Overlay} from "./pages/overlay";
 
 const PageStyle = styled.div`
     display: flex;
@@ -52,6 +53,8 @@ export const App = () => {
                        element={<Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
                 <Route path='/stream'
                        element={<Stream playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
+                <Route path='/overlay'
+                       element={<Overlay playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
             </Routes>
         </PageStyle>
     );

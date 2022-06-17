@@ -15,13 +15,13 @@ display: flex;
 align-items: center
 justify-content: center;
 box-sizing: border-box;
-.a {
+.panels {
     position: absolute;
     top: 25px;
     right: 25px;
     display: flex;
 }
-.b{
+.game {
     position: absolute;
     left: 25px;
     top: 25px;
@@ -29,10 +29,10 @@ box-sizing: border-box;
     width: 1025px;
     .content {
         height: calc(550px - 1.5rem);
-        background: lightgray;
+        background: slategray;
       }
    }
-.c {
+.chat {
     position: absolute;
     left: 25px;
     bottom: 100px;
@@ -43,7 +43,7 @@ box-sizing: border-box;
         // background: #018281;
     }
 }
-.d {
+.webcam {
     position: absolute;
     right: 25px;
     bottom: 400px;
@@ -51,7 +51,7 @@ box-sizing: border-box;
     width: 810px;
     .content {
         height: calc(575px - 1.5rem);
-        background: lightgray;
+        background: slategray;
     }
 }
 }
@@ -62,25 +62,25 @@ export const Overlay = props => {
 
     return (
         <OverlayDiv>
-            <div className="a">
+            <div className='panels'>
             <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} title='crochet_aoe'/>
             <GraphPanel className='B' matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory} title='crochet_elo'/>
             </div>
-            <div className="b">
+            <div className='game'>
                 <StyledPanel title='age of empires'>
-                    <StyledPanelHeader>age of empires</StyledPanelHeader>
+                    <StyledPanelHeader background='purple'>age of empires</StyledPanelHeader>
                     <div className="content"></div>
                 </StyledPanel>
             </div>
-            <div className="c">
+            <div className='chat'>
                 <StyledPanel>
                     <StyledPanelHeader>crochet_chat</StyledPanelHeader>
                     <div className="content"></div>
                 </StyledPanel>
             </div>
-            <div className="d">
+            <div className='webcam'>
                 <StyledPanel>
-                    <StyledPanelHeader>crochet_cam</StyledPanelHeader>
+                    <StyledPanelHeader background='purple'>crochet_cam</StyledPanelHeader>
                     <div className="content"></div>
                 </StyledPanel>
             </div>

@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
 import {getLeaderboard, getMatchHistory, getRatingHistory} from './services/aoe-api';
 import {Home} from './pages/home';
-import {Stream} from './pages/stream';
+import {Overlay} from './pages/overlay';
 
 const PageStyle = styled.div`
     display: flex;
@@ -45,13 +45,14 @@ export const App = () => {
         ]).then(() => setLoading(false));
     }, []);
 
+    const homeElement = <Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
+    const overlayElement = <Overlay playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
+
     return (
         <PageStyle>
             <Routes>
-                <Route path='*'
-                       element={<Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
-                <Route path='/stream'
-                       element={<Stream playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>}/>
+                <Route path='*' element={homeElement}/>
+                <Route path='/overlay' element={overlayElement}/>
             </Routes>
         </PageStyle>
     );

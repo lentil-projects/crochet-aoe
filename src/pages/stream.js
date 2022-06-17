@@ -5,6 +5,7 @@ import {GraphPanel} from '../components/graph-panel';
 const FlexDiv = styled.div`
     display: flex;
     margin-bottom: 150px;
+    align-items: start;
 `;
 
 export const Stream = props => {
@@ -12,8 +13,8 @@ export const Stream = props => {
 
     return (
         <FlexDiv>
-            <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}/>
-            <GraphPanel matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
+            <Panel playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} title='crochet_aoe'/>
+            <GraphPanel matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory} title='elo'/>
         </FlexDiv>
     );
 };

@@ -20,6 +20,7 @@ const LinkPanelStyle = styled.div`
     &:hover {
         cursor: pointer;
         box-shadow: 7px 7px black;
+      }
 `;
 
 export const LinkPanel = props => {

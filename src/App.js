@@ -7,12 +7,12 @@ import {Home} from './pages/home';
 import {Overlay} from './pages/overlay';
 
 const PageStyle = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background: #018281;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #018281;
 `;
 
 export const App = () => {
@@ -45,8 +45,10 @@ export const App = () => {
         ]).then(() => setLoading(false));
     }, []);
 
-    const homeElement = <Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
-    const overlayElement = <Overlay playerInfo={playerInfo} matchHistory={matchHistory} loading={loading} ratingHistory={ratingHistory}/>
+    const homeElement = <Home playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}
+                              ratingHistory={ratingHistory}/>
+    const overlayElement = <Overlay playerInfo={playerInfo} matchHistory={matchHistory} loading={loading}
+                                    ratingHistory={ratingHistory}/>
 
     return (
         <PageStyle>

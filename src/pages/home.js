@@ -5,14 +5,14 @@ import styled from 'styled-components';
 import {GraphPanel} from '../components/graph-panel';
 
 const FlexDiv = styled.div`
-    display: flex;
-    margin-bottom: 150px;
-    align-items: start;
+  display: flex;
+  margin-bottom: 150px;
+  align-items: start;
 `;
 
 const LinkDiv = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Home = props => {

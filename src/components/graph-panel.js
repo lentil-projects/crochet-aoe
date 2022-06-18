@@ -29,12 +29,12 @@ export const GraphPanel = props => {
         <StyledPanel>
             {title && <PanelHeader title={title}/>}
             <div className='content'>
-            <ApexChart
-                options={options}
-                colors={options.colors}
-                series={options.series}
-                width={350}
-            />
+                <ApexChart
+                    options={options}
+                    colors={options.colors}
+                    series={options.series}
+                    width={350}
+                />
             </div>
         </StyledPanel>
     )

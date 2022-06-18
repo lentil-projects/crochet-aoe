@@ -12,7 +12,7 @@ export const StyledPanelHeader = styled.div`
   font-weight: bold;
   font-size: 1.5rem;
   text-shadow: 1px 1px black;
-  font-family: 'Courier new', serif ';
+  font-family: 'Courier new', serif;
 `;
 
 export const PanelHeader = props => {

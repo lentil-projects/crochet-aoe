@@ -23,7 +23,7 @@ export const StyledPanel = styled.div`
   marquee {
     background: black;
     color: white;
-    font-family: 'Papyrus',serif;
+    font-family: 'Papyrus', cursive;
     font-size: 1.05rem;
   }
 

@@ -32,7 +32,6 @@ const OverlayDiv = styled.div`
 
     .content {
       height: calc(550px - 1.5rem);
-      background: slategray;
     }
   }
 
@@ -53,11 +52,10 @@ const OverlayDiv = styled.div`
     right: 25px;
     bottom: 400px;
     height: 300px;
-    width: 810px;
+    width: 820px;
 
     .content {
       height: calc(575px - 1.5rem);
-      background: slategray;
     }
   }
 `;

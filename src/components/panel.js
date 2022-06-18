@@ -18,7 +18,7 @@ export const Panel = props => {
                     <br/>
                     <marquee>iwillhealyou12 and themetalgladiator!</marquee>
                     <br/>
-                    <marquee>gadzookzzz!</marquee>
+                    <marquee>gadzookzzz! shaggybath!</marquee>
                 </>
             ) : 'loading'}
             </div>

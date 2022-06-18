@@ -7,22 +7,36 @@ export const GraphPanel = props => {
     const data = [];
     props.ratingHistory.map(crochet => data.push(crochet.rating));
     const {title} = props;
+    const matchHistory = filterMatchHistory(props.matchHistory);
+    const trimmedRatings = data.slice(0, matchHistory.length).reverse();
 
     const options = {
         chart: {
             type: 'line',
             toolbar: {
                 show: false
-            }
+            },
+            background: '#fff'
         },
         series: [{
             name: 'elo',
-            data: data.reverse()
+            data: trimmedRatings
         }],
         xaxis: {
-            categories: filterMatchHistory(props.matchHistory)
+            categories: matchHistory,
         },
-        colors: ['#000']
+        yaxis: {
+            categories: matchHistory,
+            labels: {
+                style: {
+                    fontSize: '15px',
+                    fontFamily: 'Helvetica, Arial, sans-serif',
+                    fontWeight: 400,
+                    cssClass: 'apexcharts-xaxis-label',
+                },
+            }
+        },
+        colors: ['#800080']
     }
 
     return (

@@ -6,10 +6,11 @@ export const StyledPanel = styled.div`
   flex-direction: column;
   justify-content: start;
   margin-right: 20px;
-  background: lightgray;
+  background: rgb(28, 28, 33);
   box-sizing: border-box;
   box-shadow: 5px 5px black;
-  border: 3px outset white;
+  border: 2px outset rgb(25, 25, 25);
+  color: rgb(191, 191, 191);
 
   h1 {
     font-size: 3rem;
@@ -29,9 +30,9 @@ export const StyledPanel = styled.div`
 
   .content {
     padding: 15px;
-    background: white;
     margin: 5px;
-    border: 3px inset white;
+    border: 2px inset rgb(25, 25, 25);
     height: 75%;
+    background: rgb(28, 28, 33);
   }
 `;

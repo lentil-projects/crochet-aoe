@@ -10,8 +10,6 @@ export const GraphPanel = props => {
     const matchHistory = filterMatchHistory(props.matchHistory);
     const trimmedRatings = data.slice(0, matchHistory.length).reverse();
 
-    console.log()
-
     const options = {
         chart: {
             type: 'line',

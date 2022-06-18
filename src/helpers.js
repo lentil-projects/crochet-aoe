@@ -1,7 +1,11 @@
 export const filterMatchHistory = history => {
     const array = [];
-    history = history.filter(match => match.name === 'AUTOMATCH');
-    history.map(match => {
+
+    const filteredHistory = history
+        .filter(match => match.name === 'AUTOMATCH')
+        .filter(match => match.players.length === 2);
+
+    filteredHistory.map(match => {
         const result = Object.values(match.players).filter(obj => obj.name === 'crochet')[0].won;
         if (result === null) array.push('')
         else if (result) {

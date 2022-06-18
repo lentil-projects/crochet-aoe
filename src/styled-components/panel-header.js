@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledPanelHeader = styled.div`
   height: 2.35rem;
-  background: ${props => props.background ? props.background : 'navy'};
+  background: ${props => props.background ? props.background : 'purple'};
   width: 100%;
   color: white;
   display: flex;

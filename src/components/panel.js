@@ -14,11 +14,11 @@ export const Panel = props => {
                     <p>last match: {getLastMatchTime(matchHistory)}</p>
                     <h2>elo: {playerInfo.rating} {getChangeInELo(playerInfo)}</h2>
                     <p>shout out new followers:</p>
-                    <marquee>gadzookzzz! shaggybath!</marquee>
-                    <br/>
-                    <marquee>ImNavarian and TBG_UK!</marquee>
+                    <marquee>ImNavarian, TBG_UK, monkeyninja!</marquee>
                     <br/>
                     <marquee>RockandRogue, mrsnoo_ii, and CharChar!</marquee>
+                    <br/>
+                    <marquee>Captjow9 and GemTheSorceress!</marquee>
                 </>
             ) : 'loading'}
             </div>

@@ -13,6 +13,7 @@ const PageStyle = styled.div`
   width: 100vw;
   background-image: url(${overlay});
   padding: 50px;
+  background-size: 100vw;
 `;
 
 export const App = () => {

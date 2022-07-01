@@ -8,17 +8,11 @@ export const Panel = props => {
         <StyledPanel>
             {title && <PanelHeader title={title}/>}
             <div className='content'>
-            <h1>crochet 🧶</h1>
+            <h1>crochet</h1>
             {!loading ? (
                 <>
                     <p>last match: {getLastMatchTime(matchHistory)}</p>
                     <h2>elo: {playerInfo.rating} {getChangeInELo(playerInfo)}</h2>
-                    <p>shout out new followers:</p>
-                    <marquee>ImNavarian, TBG_UK, monkeyninja!</marquee>
-                    <br/>
-                    <marquee>RockandRogue, mrsnoo_ii, and CharChar!</marquee>
-                    <br/>
-                    <marquee>Captjow9 and GemTheSorceress!</marquee>
                 </>
             ) : 'loading'}
             </div>

@@ -1,8 +1,9 @@
-import {Panel} from "../components/panel";
-import {GraphPanel} from "../components/graph-panel";
+import {Panel} from '../components/panel';
+import {GraphPanel} from '../components/graph-panel';
 import styled from 'styled-components';
-import {StyledPanelHeader} from "../styled-components/panel-header";
-import {StyledPanel} from "../styled-components/panel";
+import {StyledPanelHeader} from '../styled-components/panel-header';
+import {StyledPanel} from '../styled-components/panel';
+import overlay from '../assets/overlay3.png'
 
 const OverlayDiv = styled.div`
   position: absolute;
@@ -10,11 +11,11 @@ const OverlayDiv = styled.div`
   left: 0;
   height: 1080px;
   width: 1920px;
-  border: 10px solid yellow;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background-image: url(${overlay});
 
   .panels {
     position: absolute;
@@ -46,7 +47,7 @@ const OverlayDiv = styled.div`
       height: calc(275px - 1.5rem);
     }
   }
-
+  
   .webcam {
     position: absolute;
     right: 25px;

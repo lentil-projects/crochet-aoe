@@ -5,14 +5,16 @@ import styled from 'styled-components';
 import {getLeaderboard, getMatchHistory, getRatingHistory} from './services/aoe-api';
 import {Home} from './pages/home';
 import {Overlay} from './pages/overlay';
+import overlay from './assets/overlay2.png';
 
 const PageStyle = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  //align-items: center;
+  //justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: #018281;
+  background-image: url(${overlay});
+  padding: 50px;
 `;
 
 export const App = () => {
